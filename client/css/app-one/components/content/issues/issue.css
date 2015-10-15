@@ -1,0 +1,217 @@
+/* 
+
+Styling for IssueComponents component
+Renders at '/' or '/issues'
+
+*/
+
+
+/* MOBILE - less than 500px */
+
+
+/*
+
+Issue - class = issue-card
+The component which displays an issue's details
+0 Child components
+
+*/
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card {
+  position: relative;
+  width: 90%;
+  max-width: 320px;
+  height: 450px;
+  display: inline-block;
+  margin: 4px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 1);
+  transition: 0.4s;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .blur-background {
+  background-size: cover !important;
+  background-position: center;
+  -webkit-filter: blur(35px);
+  filter: blur(5px);
+  width: 120%;
+  height: 120%;
+  top: -20px;
+  left: -20px;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(28, 26, 26);
+  opacity: 0.5; /* Not rgba due to cross browser support */
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .issue-title {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  word-break: break-all;
+  top: 0;
+  font-weight: 100;
+  margin: auto;
+  width: 90%;
+  left: 0;
+  right: 0;
+  padding-top: 25px;
+  font-size: 18px;
+  opacity: 0.7;
+  transition:0.3s;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .issue-title:hover {
+  opacity: 1;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .issue-number {
+  position: absolute;
+  bottom: 47px;
+  left: 0;
+  right: 0;
+  display: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.4s;
+  font-weight: 600;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .issue-number:hover {
+  color: #2dbe63;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .user-image {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  border-radius: 100%;
+  background-size: cover!important;
+  right: 0;
+  margin: auto;
+  top: 115px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .user-image:hover {
+	box-shadow: 0 0 15px black;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .user-name {
+  position: relative;
+  top: 47px;
+  color: #969393;
+  font-weight: 100;
+  cursor: pointer;
+  transition:0.4s;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .user-name:hover {
+	color:white;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .seperator {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  margin: auto;
+  background: #2dbe63;
+  top: 54px;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .issue-description {
+  font-size: 14px;
+  color: #8C8989;
+  position: relative;
+  top: 65px;
+  font-style: italic;
+  padding: 0 10px;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .chat-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+  color: #8D8A8A;
+  font-size: 14px;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .chat-icon:before {
+  font-size: 16px;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > a > .open-new-tab {
+  color: #8D8A8A;
+  position: absolute;
+  bottom: 10px;
+  right: 23px;
+  font-size: 17px;
+  cursor: pointer;
+  transition:0.4s;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > a > .open-new-tab:hover {
+	color:white;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .labels-container {
+    position: absolute;
+    bottom: 42px;
+    text-align: center;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .labels-container > .label {
+    color: #F0F0F0;
+    font-size: 10px;
+    width: auto;
+    padding: 2px 10px;
+    margin: 5px;
+    max-width: 115px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 3px;
+    display: inline-block;	
+}
+
+
+/* TABLET - greater than 500px */
+
+@media(min-width:500px) {
+  .app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card {
+    height: 500px;
+  }
+  .app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner {
+    height: 225px;
+  }
+  .app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .user-image {
+    top: 185px;
+    width: 70px;
+    height: 70px;
+  }
+  .app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .issue-title {
+    padding-top: 40px;
+    font-size: 20px;
+  }
+  .app-container > .states-content > .issues-container > .issues-controller > .issues > .issue-card > .banner > .issue-number {
+    display: block;
+  }
+}

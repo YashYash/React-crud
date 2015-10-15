@@ -1,0 +1,139 @@
+/* 
+
+Styling for IssuesComponents component
+Renders at '/' or '/issues'
+
+*/
+
+
+/* MOBILE - less than 500px */
+
+
+/*
+
+Parent Component - class = issues-container
+The overall container for the parentComponent
+1 Child component
+1. IssuesController
+
+*/
+
+.app-container > .states-content > .issues-container {
+  text-align: center;
+}
+
+.app-container > .states-content > .issues-container > .issues-title-container {
+  position: relative;
+  bottom: 30px;
+  width: 280px;
+  height: auto;
+  margin: auto;
+  z-index: 1;
+  transition: 0.4s;
+}
+
+.app-container > .states-content > .issues-container > .issues-title-container > h1 {
+  font-size: 40px;
+  font-weight: 100;
+  transition: 0.4s;
+  color:white;
+}
+
+.app-container > .states-content > .issues-container > .issues-title-container > p {
+  color: #2dbe63;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/*
+
+Issues Controller - class = issues-controller
+The component which contains the issues and the pagination components
+2 Child components
+1. Issues
+2. Pagination
+
+*/
+
+.app-container > .states-content > .issues-container > .issues-controller {
+  position: relative;
+}
+
+
+/*
+
+Issues - class = issues-list
+The component which contains the issue components
+1 Child component
+1. Issue
+
+*/
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues {
+  position: relative;
+  padding: 0 20px;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues {
+	padding:120px 0;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues.hide {
+	display: none;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues > .loader {
+    position: relative;
+    margin:auto;
+    height: 50px;
+    width:50px;    
+    border-left: 1px solid rgba(45,190,99,1);
+    border-top: 1px solid rgba(45,190,99,1);
+    border-radius: 100%;
+    animation: rotate infinite 1s;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues > .github-loader {
+      font-size: 60px; 
+      animation: toggleColors infinite 2s;
+      transition:0.2s;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues > .loading-copy {
+	color: white;
+    font-size: 11px;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues > .loading-copy > span:nth-child(1) {
+	display: block;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues > .loading-copy > span:nth-child(2) {
+	display: none;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues.hide > .loading-copy > span:nth-child(1) {
+	display: none;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .issues > .loading-issues.hide > .loading-copy > span:nth-child(2) {
+	display: block;
+}
+@keyframes toggleColors {
+  0% {
+    color:black;
+  }
+  25% {
+    color: #2dbe63;
+  }
+  50% {
+    color: #d86365;
+  }
+  100% {
+    color:black;
+  }
+}
+
+/* TABLET - greater than 500px */
+
+@media(min-width:500px) {
+  .app-container > .states-content > .issues-container > .issues-title-container {
+    bottom: 85px;
+  }
+  .app-container > .states-content > .issues-container > .issues-title-container > h1 {
+    font-size: 50px;
+  }
+}

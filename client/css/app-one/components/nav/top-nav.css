@@ -1,0 +1,114 @@
+/* 
+
+Styling for TopNav component
+This component renders the fixed nav at the top of the page
+1 Child Component
+1. SideNav
+
+*/
+
+/* The div that the TopNav component renders in - found in AppComponent */
+.app-container > .nav-container {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:50px;
+	z-index: 2; /* Banner has a z-index of 1 */
+	background: linear-gradient(to bottom,rgba(19,19,19,1)0%,rgba(28,28,28,.1)77%,rgba(17,17,17,.03)83%,rgba(89,88,89,0)89%,rgba(89,88,89,0)100%);	
+	transition:0.4s ease;
+	overflow: visible;
+}
+
+/* TopNav Component */
+
+/* Hamburger - top left */
+.app-container > .nav-container > .top-nav > .hamburger {
+	position: absolute;
+	left:0;
+	padding:15px;
+	cursor:pointer;
+}
+
+.app-container > .nav-container > .top-nav > .hamburger > div {
+	height:4px;
+	background:white;
+	display: block;
+	margin-bottom:5px;
+	transition:0.3s;
+}
+
+.app-container > .nav-container > .top-nav > .hamburger > div:nth-child(1),
+.app-container > .nav-container > .top-nav > .hamburger > div:nth-child(3) {
+	width:30px;
+}
+.app-container > .nav-container > .top-nav > .hamburger > div:nth-child(2) {
+	width:25px;
+}
+
+/*
+	
+	SideNav Component
+
+*/
+
+.app-container > .nav-container > .top-nav > .side-nav {
+	position: fixed;
+	top:0;
+	left:-350;
+	width:350px;
+	height:100%;
+	text-align: center;
+	z-index: 0;
+}
+
+.app-container > .nav-container > .top-nav > .side-nav > img {
+    width: 95px;
+    margin: auto;
+    position: relative;
+    padding: 40px 0;
+}
+.app-container > .nav-container > .top-nav > .side-nav > .heading {
+	color:white;
+	font-size:26px;
+	font-weight:100;
+}
+.app-container > .nav-container > .top-nav > .side-nav > .my-name {
+	color:white;
+	padding-bottom:10px;
+	padding-top:4px;
+	font-size:14px;
+	font-weight:600;
+}
+.app-container > .nav-container > .top-nav > .side-nav > .development-time {
+    color: #00ACED;
+    padding: 2px 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.app-container > .nav-container > .top-nav > .side-nav > .seperator {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  margin: auto;
+  background: #2dbe63;
+  margin-bottom:40px;
+}
+.app-container > .nav-container > .top-nav > .side-nav > .icon {
+	color:white;
+	font-size:30px;
+	margin-bottom:20px;
+	opacity:0.5;
+	cursor: pointer;
+	transition:0.3s;
+}
+
+.app-container > .nav-container > .top-nav > .side-nav > .icon:hover {
+	opacity: 1;
+	transform: scale(1.1, 1.1);
+}
+
+.app-container > .nav-container > .top-nav > .side-nav > .thanks {
+	font-size:14px;
+	color:white;
+}

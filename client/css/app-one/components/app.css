@@ -1,0 +1,37 @@
+/* 
+
+Styling for AppComponent component
+Overall app's parent container 
+3 Child Components
+1. TopNav
+2. Banner
+3. State Content -- contents change based on url
+
+*/
+
+.app-container {
+	height:100%;
+	position: relative;
+	background:#1C1A1A;
+}
+
+.slide-right {
+	transform: translateX(350px);
+	overflow: hidden;
+}
+
+.app-container > .disable-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 350px);
+    height: 100%;
+    background: rgba(1,1,1,.8);
+    z-index: 2;
+    display: none;
+}
+/* The container that the content renders in */
+.app-container > .states-content {
+	position: relative;
+	transition:0.4s ease;
+}

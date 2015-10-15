@@ -1,0 +1,63 @@
+/* 
+
+Styling for Paginate component
+Renders at '/' or '/issues'
+0 Child components
+
+*/
+
+
+/* MOBILE - less than 500px */
+
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  user-select: none;
+}
+
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > .number {
+  display: inline-block;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  color: #2DBE63;
+  border-radius: 100%;
+  margin: 0 10px;
+  cursor: pointer;
+  border:1px solid #2DBE63;
+  transition:0.4s;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > .number.active,
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > .number:hover {
+	transform:scale(1.5, 1.5);
+	color:white;
+	background: #2DBE63;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > i {
+	color: white;
+	position: relative;
+	top: 7px;
+	cursor: pointer;
+	transition:0.4s;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > i:hover {
+	color:#2DBE63;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > i.previous {
+	right: 20px;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > i.next {
+	left: 20px;
+}
+.app-container > .states-content > .issues-container > .issues-controller > .paginate-container > .number > span {
+  font-size: 12px;
+  position: relative;
+  top: 4px;
+  font-weight:100;
+}
+
+
+/* TABLET - greater than 500px */
+
+@media(min-width:500px) {}

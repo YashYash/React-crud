@@ -1,0 +1,64 @@
+/* 
+
+Styling for Banner component
+The banner that is present at the top of the page
+0 Child Components
+
+*/
+
+/* MOBILE - less than 500px */
+
+/* The div that the Banner component renders in - found in AppComponent */
+.app-container > .banner-container {
+	position: relative;
+	width:100%;
+	height:300px;
+	background: url('https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/red-purple-vector.png');
+	background-size:cover;
+	transition:0.4s ease;
+}
+
+/* Banner component */
+
+/* Gradient */
+.app-container > .banner-container > .banner > .absolute {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 1; /* TopNav has a z-index of 2 */
+}
+.app-container > .banner-container > .banner > .absolute.gradient {
+	background: -moz-linear-gradient(top,  rgba(28,27,27,0) 0%, rgba(28,27,27,1) 78%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(28,27,27,0)), color-stop(78%,rgba(28,27,27,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(28,27,27,0) 0%,rgba(28,27,27,1) 78%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(28,27,27,0) 0%,rgba(28,27,27,1) 78%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(28,27,27,0) 0%,rgba(28,27,27,1) 78%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(28,27,27,0) 0%,rgba(28,27,27,1) 78%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001c1b1b', endColorstr='#1c1b1b',GradientType=0 ); /* IE6-9 */
+}
+
+.app-container > .banner-container > .banner > .absolute.overlay {
+	background:rgba(28, 27, 27, 0.4);
+}
+
+.app-container > .banner-container > .banner > .github-logo {
+	position: absolute;
+    width: 200px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition:0.4s;
+}
+
+/* TABLET - greater than 500px */
+@media(min-width:500px) {
+	.app-container > .banner-container {
+		height:500px;
+	}
+	.app-container > .banner-container > .banner > .github-logo {
+		bottom:125px;
+	}
+}
